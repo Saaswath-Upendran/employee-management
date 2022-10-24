@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% block body %}
+<div class="container">
+    <form action="login" method="POST">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input type="submit" class="ui green button" value="Login">
+    </form>
+</div>
+{% endblock %}
