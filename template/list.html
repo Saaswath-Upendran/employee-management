@@ -5,7 +5,7 @@
 <div class="d-flex justify-content-center">
         <ul>
                 {% for i in employe_list%}
-                <li><a href="{% url 'employe:details' i.id  %}"  >{{i}}</a></li>
+                <li><a class="nav-link" href="{% url 'employe:details' i.id  %}"  >{{i}}</a></li>
                 {% endfor%}
         </ul>
 </div>

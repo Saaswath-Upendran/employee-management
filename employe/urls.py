@@ -10,4 +10,5 @@ urlpatterns = [
     path('employe_detail/<int:pk>',EmployeDetail.as_view(),name='details'),
     path('employe_update/<int:pk>',EmployeUpdate.as_view(),name='update'),
     path('employe_delete/<int:pk>',EmployeDelete.as_view(),name='delete'),
+    path('aboutus/',AboutView.as_view(),name='about'),
 ]

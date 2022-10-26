@@ -69,3 +69,7 @@ class EmployeDelete(DeleteView):
     success_url = reverse_lazy("employe:list")
     template_name = "delete.html"
     
+
+
+class AboutView(TemplateView):
+    template_name = 'aboutus.html'

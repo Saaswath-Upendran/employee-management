@@ -19,3 +19,12 @@ class UserProfile(models.Model):
 
 
 
+class EmployeeWorkingHours(models.Model):
+    user = models.ForeignKey(UserProfile,on_delete=models.CASCADE)
+    start_time = models.DateTimeField(blank=True,null=True)
+    end_time = models.DateTimeField(blank=True,null=True)
+
+    
+
+
+
