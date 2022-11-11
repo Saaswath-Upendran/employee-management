@@ -12,4 +12,6 @@ class UserForm(forms.ModelForm):
 class UserProfileInfo(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ('dob','phone_number')
+        fields = ('employe_role','dob','phone_number','qrcode')
+
+

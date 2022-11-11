@@ -10,5 +10,10 @@ urlpatterns = [
     path('employe_detail/<int:pk>',EmployeDetail.as_view(),name='details'),
     path('employe_update/<int:pk>',EmployeUpdate.as_view(),name='update'),
     path('employe_delete/<int:pk>',EmployeDelete.as_view(),name='delete'),
-    path('aboutus/',AboutView.as_view(),name='about'),
+    path('aboutus/',FeedbackView.as_view(),name='about'),
+    path('userhome/',Userview,name='userhome'),
+    path('profile',Profileview,name='profile_details'),
+    path("feedback_list/",FeedBackList.as_view(),name='feedback_list'),
+    path("feedback_detail/<int:pk>",FeedBackDetail.as_view(),name="feedback_detail")
+    
 ]

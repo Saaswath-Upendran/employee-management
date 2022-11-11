@@ -35,8 +35,8 @@ function start(flag) {
           // calling start() function recursivly to continue stopwatch
           start();
         }
-                               , 10);
         // setTimeout delay time 10 milliseconds
+        , 10);
       }
       /* function to pause stopwatch */
       function pause() {
@@ -52,3 +52,4 @@ function start(flag) {
         stopwatch.innerHTML = '00:00:00';
         startBtn.disabled = false;
       }
+

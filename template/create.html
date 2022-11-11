@@ -2,7 +2,8 @@
 {% load bootstrap5 %}
 {% block body %}
 <div class="container">
-    <form method="POST">
+    <h2>Create User</h2>
+    <form enctype="multipart/form-data" method="POST">
         {% csrf_token %}
         {% bootstrap_form user_form %}
         {% bootstrap_form profile_form %}
