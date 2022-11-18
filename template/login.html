@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% load bootstrap5 %}
 {% block body %}
+<style>
+    body{
+        background-image: url('../static/admin3.jpg');
+    }
+</style>
 <div class="container">
-    <h1>Login</h1>
+    <h1 style="color: white;">Login</h1>
     <form action="login" method="POST">
         {% csrf_token %}
         {% bootstrap_form form %}

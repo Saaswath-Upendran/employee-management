@@ -10,7 +10,7 @@
     <p>Role :{{employe_detail.employe_role}}</p>
     <p>Phone Number :{{employe_detail.phone_number}}</p>
     <p>Last Login :{{employe_detail.user.last_login}}</p>
-    <p>Last Logout :{{employe_detail.user.last_logout}}</p>
+    <p>Last Logout :{{employe_detail.logout_time}}</p>
     <a href="{% url 'employe:update' employe_detail.id %}" class="btn btn-warning">Update</a>
     <a href="{% url 'employe:delete' employe_detail.id %}" class="btn btn-danger">Delete</a>
 </div>

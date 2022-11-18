@@ -121,10 +121,18 @@ class FeedBackDetail(DetailView):
     model = FeedBack
     template_name = 'feedbackdetail.html'
 
+class Admin2user(CreateView):
+    model = AdmintoUser
+    fields = ('user','comments')
+    success_url = reverse_lazy('employe:feedback_list')
+    template_name = 'adminfeedback.html'
+
+def usernotification(request):
+    user = AdmintoUser.objects.filter(user=request.user)
+    return render(request,'notification.html',{'note':user})
 import datetime
 
 def signout(request):
-    profile = request.user # it depends  # Do it with ajax
     logout(request)
     return redirect("employe:home")
 

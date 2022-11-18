@@ -14,6 +14,8 @@ urlpatterns = [
     path('userhome/',Userview,name='userhome'),
     path('profile',Profileview,name='profile_details'),
     path("feedback_list/",FeedBackList.as_view(),name='feedback_list'),
-    path("feedback_detail/<int:pk>",FeedBackDetail.as_view(),name="feedback_detail")
+    path("feedback_detail/<int:pk>",FeedBackDetail.as_view(),name="feedback_detail"),
+    path('feedbackadmin',Admin2user.as_view(),name='admin_feedback'),
+    path('notification',usernotification,name='usr_note')
     
 ]

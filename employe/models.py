@@ -27,7 +27,7 @@ class UserProfile(models.Model):
     phone_number = PhoneField(blank=True, help_text='Contact phone number')
     employe_role = models.CharField(choices=EMPLOYE_ROLE,max_length=120)
     qrcode  = models.ImageField(blank=True)
-    logout_time = models.DateTimeField(blank=True,null=True,default=timezone.now())
+    logout_time = models.DateTimeField(blank=True,null=True)
     def __str__(self):
         return self.user.username
 
@@ -65,9 +65,8 @@ class FeedBack(models.Model):
         return self.name
 
 
-class Profile(models.Model):
-    user = models.ForeignKey(UserProfile,on_delete=models.CASCADE)
-    
+class AdmintoUser(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    comments = models.TextField()
+    sent_time = models.DateTimeField(blank=True,null=True,default=timezone.now())
 
-    def __str__(self):
-        return self.user

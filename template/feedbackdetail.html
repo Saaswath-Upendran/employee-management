@@ -2,8 +2,20 @@
 
 {% block body %}
 <div class="container">
-    <p>Name : {{feedback_detail.name}}</p>
-    <p>Role :{{feedback_detail.role}}</p>
-    <p>Comments : {{feedback_detail.comments}}</p>
+
+    <table class="table">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Role</th>
+            <th scope="col">Comments</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td>{{feedback_detail.name}}</td>
+                <td>{{feedback_detail.role}}</td>
+                <td>{{feedback_detail.comments}}</td>   
+            </tr>
+        </tbody>
+    </table>
 </div>
 {% endblock%}
